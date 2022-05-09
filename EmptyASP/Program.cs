@@ -57,6 +57,7 @@ app.MapGet("/hello/{name}", (string name) => $"Hello {name}!");
 // Handle a basic post request, get input from body (includes input/output types for swagger)
 // Swagger friendly version
 app.MapPost("/thing", Thing (HttpContext context, Thing thang) => {
+    Console.WriteLine(context.Request.Method);
     return thang;
 });
 
